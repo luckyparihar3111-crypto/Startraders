@@ -1,0 +1,23 @@
+# Startraders Client Build Commands
+# Run these commands in VPS terminal after SSH connection
+
+# Navigate to client directory
+cd ~/Startraders/client
+
+# Install dependencies
+npm install
+
+# Build for production
+npm run build
+
+# Verify build completed
+ls -la build/
+
+# Copy build files to nginx directory (after build completes)
+sudo cp -r build/* /var/www/html/
+
+# Restart nginx to serve new files
+sudo systemctl reload nginx
+
+echo "✅ Client build completed and deployed!"
+echo "🌐 Visit: http://31.97.207.160 to see your app"
