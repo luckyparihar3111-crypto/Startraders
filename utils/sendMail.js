@@ -4,7 +4,7 @@ const nodemailer = require('nodemailer');
 const createEmailTransporter = () => {
   console.log('🚀 Creating Gmail SMTP Transporter...');
   
-  return nodemailer.createTransporter({
+  return nodemailer.createTransport({
     service: 'Gmail',
     auth: {
       user: 'starttradersnoreply@gmail.com',
@@ -14,7 +14,10 @@ const createEmailTransporter = () => {
     port: 587,
     secure: false, // Use TLS
     debug: true,   // Enable debug logs
-    logger: true   // Enable logging
+    logger: true,  // Enable logging
+    tls: {
+      rejectUnauthorized: false
+    }
   });
 };
 

@@ -6,7 +6,7 @@ const nodemailer = require('nodemailer');
 console.log('🧪 Simple Email Test Starting...');
 
 // Direct transporter (no external files)
-const transporter = nodemailer.createTransporter({
+const transporter = nodemailer.createTransport({
   service: 'Gmail',
   auth: {
     user: 'starttradersnoreply@gmail.com',
