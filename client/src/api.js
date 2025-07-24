@@ -1,16 +1,30 @@
 import axios from 'axios';
 
+// Get base URL from environment variable
+const getBaseURL = () => {
+  // Check if we have environment variable
+  if (process.env.REACT_APP_API_BASE_URL) {
+    return process.env.REACT_APP_API_BASE_URL;
+  }
+  
+  // Fallback based on environment
+  if (process.env.NODE_ENV === 'production') {
+    return 'https://startradersindia.in/api';
+  }
+  
+  // Development fallback
+  return 'http://localhost:3000/api';
+};
+
 // Centralized API instance for all backend calls
 const API = axios.create({
- baseURL: process.env.NODE_ENV === 'production' 
-   ? 'https://startradersindia.in/api'
-   : 'http://localhost:3000/api',
- withCredentials: true,
- timeout: 10000,
- headers: {
-   'Content-Type': 'application/json',
-   'Accept': 'application/json'
- }
+  baseURL: getBaseURL(),
+  withCredentials: true,
+  timeout: 10000,
+  headers: {
+    'Content-Type': 'application/json',
+    'Accept': 'application/json'
+  }
 });
 
 // Request interceptor for adding auth token

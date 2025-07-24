@@ -4,7 +4,7 @@ module.exports = function(app) {
   app.use(
     '/api',
     createProxyMiddleware({
-      target: 'https://startraders-fullstack.onrender.com', // <-- Change this to your backend URL
+      target: 'https://startradersindia.in', // VPS Backend URL
       changeOrigin: true,
     })
   );

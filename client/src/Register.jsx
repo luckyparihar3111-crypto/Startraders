@@ -33,7 +33,7 @@ function Register() {
       return;
     }
     try {
-      const url = 'https://startraders-fullstack.onrender.com/api/register';
+      const url = process.env.REACT_APP_API_BASE_URL + '/register' || 'https://startradersindia.in/api/register';
       const res = await axios.post(url, {
         sponsorId: sponsorId ? sponsorId.toUpperCase() : '',
         name,
