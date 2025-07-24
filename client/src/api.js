@@ -1,26 +1,19 @@
 import axios from 'axios';
 
-// Get base URL from environment variable
+// Get base URL - Always use VPS URL for production
 const getBaseURL = () => {
-  // Check if we have environment variable
-  if (process.env.REACT_APP_API_BASE_URL) {
-    return process.env.REACT_APP_API_BASE_URL;
-  }
+  // Always return VPS URL for production deployment
+  return 'https://startradersindia.in/api';
   
-  // Fallback based on environment
-  if (process.env.NODE_ENV === 'production') {
-    return 'https://startradersindia.in/api';
-  }
-  
-  // Development fallback
-  return 'http://localhost:3000/api';
+  // For local development, use this instead:
+  // return 'http://localhost:3000/api';
 };
 
 // Centralized API instance for all backend calls
 const API = axios.create({
   baseURL: getBaseURL(),
   withCredentials: true,
-  timeout: 10000,
+  timeout: 15000,
   headers: {
     'Content-Type': 'application/json',
     'Accept': 'application/json'
