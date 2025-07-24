@@ -7,11 +7,48 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 
 const app = express();
-app.use(cors());
+
+// CORS Configuration for StarTraders Frontend
+const corsOptions = {
+  origin: [
+    'http://localhost:3000',
+    'http://localhost:3001', 
+    'http://startradersindia.in',
+    'https://startradersindia.in',
+    'http://www.startradersindia.in',
+    'https://www.startradersindia.in',
+    'http://31.97.207.160',
+    'https://31.97.207.160'
+  ],
+  credentials: true,
+  optionsSuccessStatus: 200,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: [
+    'Origin',
+    'X-Requested-With', 
+    'Content-Type',
+    'Accept',
+    'Authorization',
+    'Cache-Control',
+    'X-Access-Token'
+  ]
+};
+
+app.use(cors(corsOptions));
 app.use(express.json({ limit: '10mb' }));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use('/uploads', express.static(path.join(__dirname, 'public', 'uploads')));
+
+// Handle preflight OPTIONS requests
+app.options('*', cors(corsOptions));
+
+// Add security headers middleware
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Credentials', 'true');
+  res.header('X-Powered-By', 'StarTraders API');
+  next();
+});
 
 // OTP API for withdrawal and forgot password (must be after app is initialized)
 const userOtpRouter = require('./routes/userOtp');
