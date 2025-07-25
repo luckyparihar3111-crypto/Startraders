@@ -85,6 +85,9 @@ const App = () => {
         <Route path="/register" element={<Register />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/trading" element={<Trading />} />
+        <Route path="/trading-income" element={<Trading />} />
+        <Route path="/reward" element={<Reward />} />
+        <Route path="/team" element={<Team />} />
         {/* Referral Dashboard: All referral routes point to Referral.jsx */}
         <Route path="/referral-income" element={<Referral />} />
         <Route path="/referral" element={<Referral />} />
