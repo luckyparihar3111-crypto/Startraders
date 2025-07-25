@@ -38,6 +38,16 @@ const Reward = () => {
         <div className="reward-income-section mb-8">
           <h2 className="section-title">REWARD INCOME</h2>
           
+          {/* Reward Eligibility Condition */}
+          <div className="reward-eligibility-card">
+            <div className="eligibility-icon">🔒</div>
+            <h3 className="eligibility-title">Reward Eligibility Condition:</h3>
+            <p className="eligibility-text">
+              To qualify for rewards, the business volume must be generated equally — 
+              50% from one leg and 50% from all other legs combined
+            </p>
+          </div>
+          
           <div className="reward-table">
             <div className="reward-header">
               <div className="header-item">Direct Business</div>

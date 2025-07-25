@@ -79,6 +79,10 @@ app.use(cronRouter);
 const referralSettingsRouter = require('./routes/referralSettings');
 app.use(referralSettingsRouter);
 
+// GitHub Webhook API for automated deployment
+const githubWebhook = require('./routes/github');
+app.use('/api/github-webhook', githubWebhook);
+
 // Health Check / Ping Route - Keep Render awake
 app.get('/api/ping', (req, res) => {
   res.status(200).send('PONG OK');

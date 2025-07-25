@@ -451,143 +451,296 @@
 /* Reward Income Styles */
 .reward-income-section {
   margin-bottom: 2rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(251, 191, 36, 0.2);
+}
+
+/* Reward Eligibility Card */
+.reward-eligibility-card {
+  background: linear-gradient(135deg, #2a2a4a 0%, #1e1e3f 100%);
+  border: 2px solid #FBBF24;
+  border-radius: 15px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 25px rgba(251, 191, 36, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.reward-eligibility-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #FBBF24, #F59E0B, #FBBF24);
+}
+
+.eligibility-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  filter: drop-shadow(0 0 10px rgba(251, 191, 36, 0.5));
+}
+
+.eligibility-title {
+  color: #FBBF24;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.eligibility-text {
+  color: #E5E7EB;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: center;
+  margin: 0;
+  padding: 0 1rem;
 }
 
 .section-title {
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   font-weight: bold;
-  color: #FBBF24;
+  background: linear-gradient(135deg, #FBBF24 0%, #F59E0B 50%, #D97706 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   text-align: center;
   margin-bottom: 1.5rem;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
+  text-shadow: 0 0 30px rgba(251, 191, 36, 0.5);
 }
 
 .reward-table {
-  background: #fff;
-  border-radius: 12px;
+  background: linear-gradient(135deg, #2a2a4a 0%, #1e1e3f 100%);
+  border-radius: 15px;
   overflow: hidden;
-  border: 2px solid #374151;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(251, 191, 36, 0.3);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
 }
 
 .reward-header {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background: #fff;
-  color: #000;
+  background: linear-gradient(135deg, #FBBF24 0%, #F59E0B 100%);
+  color: #1a1a2e;
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  position: relative;
+}
+
+.reward-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #1a1a2e, transparent);
 }
 
 .header-item {
-  padding: 1rem;
+  padding: 1.2rem;
   text-align: center;
   font-style: italic;
-  font-weight: 600;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .reward-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  border-bottom: 1px solid #374151;
+  border-bottom: 1px solid rgba(251, 191, 36, 0.2);
+  transition: all 0.3s ease;
+  position: relative;
 }
 
 .reward-row:last-child {
   border-bottom: none;
 }
 
+.reward-row::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(251, 191, 36, 0.1), transparent);
+  transition: width 0.3s ease;
+}
+
+.reward-row:hover::before {
+  width: 100%;
+}
+
 .reward-cell {
-  padding: 1rem;
+  padding: 1.2rem;
   text-align: center;
-  color: #FBBF24;
+  color: #E5E7EB;
   font-size: 1.1rem;
-  font-weight: 500;
+  font-weight: 600;
   transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
 }
 
 .reward-amount {
   color: #10B981;
   font-weight: bold;
+  text-shadow: 0 0 10px rgba(16, 185, 129, 0.3);
 }
 
 .reward-row:hover .reward-cell {
-  background-color: #fff;
+  color: #FBBF24;
+  transform: translateY(-2px);
 }
 
 /* Referral Trading Income Styles */
 .referral-trading-section {
   margin-top: 3rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(251, 191, 36, 0.2);
 }
 
 .referral-table {
-  background: #fff;
-  border-radius: 12px;
+  background: linear-gradient(135deg, #2a2a4a 0%, #1e1e3f 100%);
+  border-radius: 15px;
   overflow: hidden;
-  border: 2px solid #374151;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  max-height: 400px;
+  border: 2px solid rgba(251, 191, 36, 0.3);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  max-height: 500px;
   overflow-y: auto;
+  backdrop-filter: blur(10px);
 }
 
 .referral-header {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background: #fff;
-  color: #000;
+  background: linear-gradient(135deg, #FBBF24 0%, #F59E0B 100%);
+  color: #1a1a2e;
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   position: sticky;
   top: 0;
   z-index: 10;
 }
 
+.referral-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #1a1a2e, transparent);
+}
+
 .referral-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  border-bottom: 1px solid #374151;
+  border-bottom: 1px solid rgba(251, 191, 36, 0.2);
+  transition: all 0.3s ease;
+  position: relative;
 }
 
 .referral-row:last-child {
   border-bottom: none;
 }
 
+.referral-row::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(251, 191, 36, 0.1), transparent);
+  transition: width 0.3s ease;
+}
+
+.referral-row:hover::before {
+  width: 100%;
+}
+
 .referral-cell {
-  padding: 1rem;
+  padding: 1.2rem;
   text-align: center;
   color: #E5E7EB;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 600;
   transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
 }
 
 .referral-percentage {
   color: #10B981;
   font-weight: bold;
   font-size: 1.1rem;
+  text-shadow: 0 0 10px rgba(16, 185, 129, 0.3);
 }
 
 .referral-row:hover .referral-cell {
-  background-color: #fff;
+  color: #FBBF24;
+  transform: translateY(-2px);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .reward-income-section,
+  .referral-trading-section {
+    padding: 1.5rem;
+    margin: 1rem 0;
+  }
+  
   .section-title {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     letter-spacing: 1px;
+    margin-bottom: 1rem;
+  }
+  
+  .reward-eligibility-card {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .eligibility-title {
+    font-size: 1rem;
+  }
+  
+  .eligibility-text {
+    font-size: 0.9rem;
+    padding: 0 0.5rem;
   }
   
   .header-item, .reward-cell, .referral-cell {
-    padding: 0.75rem;
+    padding: 0.8rem 0.5rem;
     font-size: 0.9rem;
   }
   
   .reward-header, .reward-row, .referral-header, .referral-row {
     grid-template-columns: 1fr 1fr;
   }
+  
+  .reward-table, .referral-table {
+    border-radius: 10px;
+  }
 }
-
 
 /* Polmax-style Dashboard CSS - Only new layout, no old code */
 .dashboard-container {
@@ -971,4 +1124,56 @@
     flex-direction: column;
     gap: 12px;
   }
+}
+
+/* Support Page Styles */
+.support-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.support-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.support-btn {
+  background: linear-gradient(135deg, #FBBF24 0%, #F59E0B 100%);
+  color: #1a1a2e;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.support-btn:hover {
+  background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(251, 191, 36, 0.3);
+}
+
+.telegram-btn {
+  background: linear-gradient(135deg, #0088cc 0%, #229ED9 100%);
+  color: white;
+}
+
+.telegram-btn:hover {
+  background: linear-gradient(135deg, #229ED9 0%, #0088cc 100%);
+  box-shadow: 0 5px 15px rgba(0, 136, 204, 0.3);
+}
+
+.contact-details p {
+  margin: 8px 0;
+  line-height: 1.6;
+}
+
+.contact-details a {
+  transition: color 0.3s ease;
+}
+
+.contact-details a:hover {
+  color: #229ED9 !important;
 }

@@ -32,7 +32,23 @@ const Support = () => {
           </div>
 
           <div className="balance-card support-card">
-            <div className="card-icon">📞</div>
+            <div className="card-icon">�</div>
+            <div className="card-content">
+              <h3>Telegram Support</h3>
+              <p>Join our official Telegram support group</p>
+              <a 
+                href="https://t.me/Startradersindiasupport" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="support-btn telegram-btn"
+              >
+                Join Telegram
+              </a>
+            </div>
+          </div>
+
+          <div className="balance-card support-card">
+            <div className="card-icon">�📞</div>
             <div className="card-content">
               <h3>Phone Support</h3>
               <p>Call us for immediate assistance</p>
@@ -63,6 +79,7 @@ const Support = () => {
           <div className="contact-details">
             <p><strong>Email:</strong> support@startraders.com</p>
             <p><strong>Phone:</strong> +1 (234) 567-8900</p>
+            <p><strong>Telegram:</strong> <a href="https://t.me/Startradersindiasupport" target="_blank" rel="noopener noreferrer" style={{ color: '#1DA1F2', textDecoration: 'none' }}>@Startradersindiasupport</a></p>
             <p><strong>Hours:</strong> 24/7 Available</p>
             <p><strong>Response Time:</strong> Within 30 minutes</p>
           </div>

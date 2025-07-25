@@ -74,8 +74,23 @@ const SideDrawer = ({ isOpen, onClose }) => {
           </Link>
 
           <Link to="/trading-income" className="neopips-nav-item" onClick={onClose}>
-            <div className="nav-icon">�</div>
+            <div className="nav-icon">📊</div>
             <span className="nav-text">Trading Income</span>
+          </Link>
+
+          <Link to="/referral-income" className="neopips-nav-item" onClick={onClose}>
+            <div className="nav-icon">👥</div>
+            <span className="nav-text">Direct Referral Income</span>
+          </Link>
+
+          <Link to="/referral-on-trading" className="neopips-nav-item" onClick={onClose}>
+            <div className="nav-icon">🔄</div>
+            <span className="nav-text">Trading Income on Direct Referral</span>
+          </Link>
+
+          <Link to="/reward" className="neopips-nav-item" onClick={onClose}>
+            <div className="nav-icon">🏆</div>
+            <span className="nav-text">Reward Income</span>
           </Link>
           
           <Link to="/withdrawal" className="neopips-nav-item" onClick={onClose}>
